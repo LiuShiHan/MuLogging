@@ -40,7 +40,6 @@ class MoLogging(Logger):
         signal.signal(signal.SIGINT, LogHandle) # 子进程忽视一下中断信号
         signal.signal(signal.SIGQUIT, LogHandle)
         while True:
-            print os.getpid()
             try:
                 record = self.queue.get(timeout=3)
                 Logger.handle(self, record)
