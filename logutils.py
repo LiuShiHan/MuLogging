@@ -73,4 +73,4 @@ if __name__ == "__main__":
     for i in range(20):
         pool.apply(task, (i,))
     time.sleep(10)
-    logger.close()
+    logger.close() # 这个可以写在主进程的信号里
